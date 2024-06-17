@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Horarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Agendamento de Horarios</h1>
+    <h2>Agenda aberta</h2>
+    <h2>Não fiquem de fora, marque ja seu Horario!!</h2>
+    <div id="schedule">
+        <!-- Horários serão gerados pelo JavaScript -->
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Marcar Horário</h2>
+            <form id="bookingForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Número de Celular:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+
+
+                <button type="submit">Confirmar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
