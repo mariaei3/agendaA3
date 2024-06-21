@@ -5,8 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookingForm = document.getElementById("bookingForm");
     let selectedTimeSlot = null;
 
+    const welcomeModal = document.getElementById("welcomeModal");
+    const startButton = document.getElementById("startButton");
+
+    welcomeModal.style.display = 'block';
+
+    startButton.onclick = function() {
+        welcomeModal.style.display = 'none';
+    }
+
     const startDate = new Date(2024, 5, 16); // 16 de Junho de 2024
-    const endDate = new Date(2024, 5, 22); // 22 de Junnho de 2024
+    const endDate = new Date(2024, 5, 22); // 22 de Junho de 2024
     const hours = Array.from({ length: 10 }, (_, i) => i + 8); // Horas de 8h às 17h
 
     // Função para formatar a data
@@ -69,7 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Encontrar e atualizar o horário marcado
         const slots = document.getElementsByClassName("time-slot");
         for (let slot of slots) {
-            if (slot.textContent === selectedTimeSlot.split(" - ")[1] && slot.parentElement.firstChild.textContent === selectedTimeSlot.split(" - ")[0]) {
+            const [date, hour] = selectedTimeSlot.split(" - ");
+            if (slot.textContent === hour && slot.parentElement.firstChild.textContent === date) {
                 slot.classList.add("unavailable");
                 slot.textContent = "Reservado";
                 break;

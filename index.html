@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento de Horarios</title>
+    <title>Agendamento de Horários</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Agendamento de Horarios</h1>
-    <h2>Agenda aberta</h2>
-    <h2>Não fiquem de fora, marque ja seu Horario!!</h2>
-    <div id="schedule">
-        <!-- Horários serão gerados pelo JavaScript -->
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Agendar</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Agendamento de Horários</h1>
+        <h2>Agenda aberta</h2>
+        <h2>Não fiquem de fora, marque já seu Horário!</h2>
+        <div id="schedule">
+         
+        </div>
     </div>
 
     <div id="modal" class="modal">
@@ -23,11 +33,16 @@
                 <input type="text" id="name" name="name" required>
                 <label for="phone">Número de Celular:</label>
                 <input type="tel" id="phone" name="phone" required>
-                
-
-
                 <button type="submit">Confirmar</button>
             </form>
+        </div>
+    </div>
+
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <h2>Bem-vindo ao Sistema de Agendamento de Horários</h2>
+            <p>Marque seus horários de forma rápida e fácil.</p>
+            <button id="startButton">Começar</button>
         </div>
     </div>
 
